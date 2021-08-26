@@ -1,0 +1,12 @@
+웹 크롤링은 URL의 콘텐츠를 추출하고 링크의 URL을 가져오는데 주로 사용. 반면에 웹 스크래퍼는 특정 데이터를 추출하는 프로세스입니다.
+사용되는 예시로는 크롤링은 Google, Yahoo 등이 어떤 종류의 정보를 검색하는 방식이고 웹 스크래핑은 주식시장 데이터, 비즈니스 리드 등과 같은
+특정 데이터에 대한 특정 웹 사이트를 대상으로 한 것을 뜻합니다.
+
+1. requests.get() 과 urllib.request.urlopen() 차이
+requests는 데이터를 보낼 때 딕셔너리 형태로 보내며 없는 페이지를 요청해도 에러를 띄우지 않는다. 반면 urllib.request는
+데이터를 보낼 때 인코딩하여 바이너리 형태로 보내고 없는 페이지를 요청하면 에러를 띄운다.
+
+2. urllib.parse.urlparse()와 BeautifulSoap 이용과의 차이
+urlparse는 URL을 조작할 때 사용하며 URL을 파싱한 결고 값을 6개의 구성요소로 나누어 튜플로 반환한다.
+BeautifulSoup4는 파싱할 때 그 자체로 parser인 것은 아니고 원하는 parser를 입력하면 알아서 처리해주는 인터페이스에 가깝다.
+가령 html의 태그들을 파싱하기 위해서는 BeautifulSoup(url,'html.parser')를 사용하는 것이 그 이유 때문입니다.
